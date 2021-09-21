@@ -7,5 +7,6 @@ class User < ApplicationRecord
   # モデル同士の関連づけ（アソシエーション）記述
   has_many :post_images, dependent: :destroy
   has_many :post_coments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
 end
