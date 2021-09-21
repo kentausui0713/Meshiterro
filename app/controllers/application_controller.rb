@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-  # deviseの追加したnameカラムにストロングパラメータを設定する
+
+  before_action :authenticate_user!,except: [:top]
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resorce)
