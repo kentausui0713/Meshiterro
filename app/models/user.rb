@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :post_coments, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
+  attachment :profile_image
+
 end
